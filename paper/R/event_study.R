@@ -66,9 +66,9 @@ run_event_study <- function(baselines, output_dir) {
   fig_es_top    <- make_tier_chart(monthly_all, "top",    "Top")
   
   # ---- Save ----
-  ggsave(file.path(output_dir, "fig_es_mid.pdf"),    fig_es_mid,    width = 8, height = 5)
-  ggsave(file.path(output_dir, "fig_es_bottom.pdf"), fig_es_bottom, width = 8, height = 5)
-  ggsave(file.path(output_dir, "fig_es_top.pdf"),    fig_es_top,    width = 8, height = 5)
+  ggsave(file.path(output_dir, "fig_es_mid.pdf"),    fig_es_mid,    width = 6.5, height = 3.85)
+  ggsave(file.path(output_dir, "fig_es_bottom.pdf"), fig_es_bottom, width = 6.5, height = 3.85)
+  ggsave(file.path(output_dir, "fig_es_top.pdf"),    fig_es_top,    width = 6.5, height = 3.85)
   
   cat(sprintf("Event study figures saved to %s\n", output_dir))
   

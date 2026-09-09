@@ -302,8 +302,8 @@ run_hedonic_plots <- function(df, xsec_df, models, output_dir) {
   # ---------------------------------------------------------------------------
   sizes <- list(
     coefficient_xsec_plot     = c(8, 5),
-    mde_plot             = c(9, 4.5),
-    panel_vs_xsec_plot   = c(8, 4.5),
+    mde_plot             = c(6.5, 3.25),
+    panel_vs_xsec_plot   = c(6.5, 3.25),
     eal_by_vintage_plot  = c(8, 5),
     partial_residual_plot= c(8, 5),
     residual_map         = c(10, 7)

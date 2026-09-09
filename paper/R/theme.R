@@ -39,17 +39,20 @@ BASELINE_COLORS <- c(
 # ---- Shared theme ----
 theme_paper <- theme_minimal(base_size = 11) +
   theme(
-    plot.title       = element_text(size = 13, face = "bold"),
-    plot.subtitle    = element_text(size = 10,  color = "grey40"),
-    plot.caption     = element_text(size = 8,  color = "grey40", hjust = 0),
-    plot.title.position   = "plot",
+    plot.title       = element_text(size = 14, face = "bold"),
+    plot.subtitle    = element_text(size = 11,  color = "grey40",
+                                    margin = margin(b = 6)),
+    plot.caption     = element_text(size = 9,  color = "grey40", hjust = 0),
+    # Align title/subtitle to the panel, not the whole plot: keeps them out
+    # of the rotated y-axis title's column so long y titles can't overlap them.
+    plot.title.position   = "panel",
     plot.caption.position = "plot",
-    axis.title       = element_text(size = 9),
-    axis.text        = element_text(size = 9),
-    axis.text.x      = element_text(size = 7, angle = 45, hjust = 1),
-    strip.text       = element_text(size = 9, face = "bold"),
-    legend.title     = element_text(size = 8),
-    legend.text      = element_text(size = 9),
+    axis.title       = element_text(size = 11),
+    axis.text        = element_text(size = 10),
+    axis.text.x      = element_text(size = 9),
+    strip.text       = element_text(size = 10, face = "bold"),
+    legend.title     = element_text(size = 9),
+    legend.text      = element_text(size = 10),
     legend.position  = "bottom",
     panel.grid.minor = element_blank()
   )

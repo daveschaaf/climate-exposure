@@ -219,7 +219,7 @@ run_balance <- function(baselines, storms, output_dir) {
   
   # ---- Save ----
   ggsave(file.path(output_dir, "fig_balance.pdf"),
-         fig_balance, width = 10, height = 10)
+         fig_balance, width = 6.5, height = 8.5)
   ggsave(file.path(output_dir, "fig_attrition.pdf"),
          fig_attrition, width = 7, height = 5)
   

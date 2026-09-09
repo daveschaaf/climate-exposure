@@ -74,8 +74,8 @@ run_hedonic_plots_legacy <- function(output_dir, include_extras = FALSE) {
   }
   
   coef_compare <- bind_rows(
-    get_coefs(mF, "Without income"),
-    get_coefs(mC, "With income")
+    get_coefs(mE, "Without income"),
+    get_coefs(mB, "With income")
   ) %>%
     filter(term %in% c("log_eal", "resl_value_z", "sovi_score_z", "coastal"))
   
@@ -142,9 +142,9 @@ run_hedonic_plots_legacy <- function(output_dir, include_extras = FALSE) {
   }
   
   # ---- Save PDFs too (still useful standalone) ----
-  ggsave(file.path(output_dir, "hedonic_coefficient_plot.pdf"), coefficient_plot, width = 8, height = 5)
-  ggsave(file.path(output_dir, "hedonic_income_comparison.pdf"), income_comparison_plot, width = 8, height = 5)
-  ggsave(file.path(output_dir, "hedonic_urban_rural.pdf"), urban_rural_plot, width = 8, height = 5)
+  ggsave(file.path(output_dir, "hedonic_coefficient_plot.pdf"), coefficient_plot, width = 6.5, height = 3.25)
+  ggsave(file.path(output_dir, "hedonic_income_comparison.pdf"), income_comparison_plot, width = 6.5, height = 3.25)
+  ggsave(file.path(output_dir, "hedonic_urban_rural.pdf"), urban_rural_plot, width = 6.5, height = 3.75)
   if (!is.null(partial_residual_bins_plot)) {
     ggsave(file.path(output_dir, "hedonic_residual_bins.pdf"), partial_residual_bins_plot$bins_plot, width = 8, height = 5)
   }

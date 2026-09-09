@@ -160,9 +160,9 @@ run_lp <- function(baselines, output_dir) {
   
   # ---- Save ----
   ggsave(file.path(output_dir, "fig_lp_tier.pdf"),
-         fig_lp_tier, width = 8, height = 5)
+         fig_lp_tier, width = 6.5, height = 4.0)
   ggsave(file.path(output_dir, "fig_lp_baseline.pdf"),
-         fig_lp_baseline, width = 8, height = 5)
+         fig_lp_baseline, width = 6.5, height = 4.0)
   
   cat(sprintf("LP figures saved to %s\n", output_dir))
   
